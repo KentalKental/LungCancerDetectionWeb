@@ -1,0 +1,374 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.web-name{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    
+}
+
+.navbar a:hover {
+    background-color: #007b6f;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style for the active link */
+.navbar a.pred {
+    background-color: #005f4f;  /* Darker background for active link */
+    color: white;  /* Ensure text color is white */
+    font-weight: bold;  /* Make the active link text bold */
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-container{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+}
+
+.header-title{
+    display: flex;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+    margin: 10px 10px 10px 25px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 10px 0px 0px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    justify-content: space-evenly;
+}
+
+.navbar li{
+   align-self: center;
+}
+
+.navbar a{
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#placeholder-img {
+    width: 100%;         /* Makes the image width 100% of the drop-area */
+    height: auto;        /* Maintains the aspect ratio of the image */
+    max-height: 100%;    /* Ensures the image height does not exceed the drop-area height */
+    object-fit: contain; /* Ensures the image is scaled correctly without distorting */
+}
+
+/* Drag-and-drop area */
+.drop-area {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    padding: 20px;
+    border: 2px dashed #00A193;
+    border-radius: 8px;
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-area:hover {
+    background-color: #f0f0f0;
+}
+
+.CT-preview {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.predictPart{
+    display: flex;
+    flex-direction: column;
+}
+#CT-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    flex-direction: row;
+    padding: 10px;
+    box-sizing: border-box; /* Make sure padding doesn't cause overflow */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows the form to expand within the container */
+    background-color: #f9f9f9; /* Add some contrast to the form area */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Prevents padding from increasing the container's width */
+}
+
+
+#CT-form button{
+    width: 100%;
+    border: 2px solid gray;
+    background-color: #00A193;
+    border-radius: 5px;
+    color: white;
+}
+
+#CT-form button:hover{
+    background-color: #007b6f;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#change-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00A193;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; 
+}
+
+#change-btn:hover {
+    background-color: #007b6f;
+}
+
+.res {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.res h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-container {
+    display: none; /* Hidden until there's a prediction result */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #eaf7ea; /* Light green for positive UX */
+    border: 1px solid #8bc34a; /* Green border for success */
+    color: #4caf50; /* Darker green for result text */
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    max-width: 100%; /* Ensure the container doesn't exceed the width of its parent */
+    box-sizing: border-box; /* Prevents padding from increasing the container's width */
+}
+
+
+.default-message {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    
+}
+
+.result-container.error {
+    background-color: #fbeaea; /* Light red for errors */
+    border: 1px solid #f44336; /* Red border for error */
+    color: #e53935; /* Darker red for error text */
+}
+
+
+.result-container.Malignant {
+    background-color: #f8d7da; /* Light red for malignant */
+    border: 1px solid #f44336; /* Red border for malignant */
+    color: #f44336; /* Red text color */
+}
+
+.result-container.Benign {
+    background-color: #fff9c4; /* Lighter yellow background for better contrast */
+    border: 1px solid #ff9800; /* Darker yellow/orange border */
+    color: #ff9800; /* Darker yellow/orange text color */
+}
+
+
+.result-container.Normal{
+    background-color: #eaf7ea; /* Light green for success */
+    border: 1px solid #4caf50;
+    color: #4caf50;
+}
+
+#caption{
+    display: flex;
+    padding: 10px;
+}
+
+
+.footer{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer p{
+    color: white;
+}
+
+#validation{
+    color: red;
+    font-weight: bold;
+    align-self: center;
+}
+
+button{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.history-container {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    margin :0;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#history-list li {
+    margin-bottom: 10px;
+
+}
+
+#history-list li.Malignant {
+    background-color: #f8d7da; /* Light red for malignant */
+    border: 1px solid #f44336; /* Red border for malignant */
+    color: #f44336; /* Red text color */
+}
+
+#history-list li.Benign {
+    background-color: #fff9c4; /* Lighter yellow background for better contrast */
+    border: 1px solid #ff9800; /* Darker yellow/orange border */
+    color: #ff9800; /* Darker yellow/orange text color */
+}
+
+
+#history-list li.Normal{
+    background-color: #eaf7ea; /* Light green for success */
+    border: 1px solid #4caf50;
+    color: #4caf50;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative; 
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: 0.3s ease 0.2s; 
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+
+
+#submitBtn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00A193;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}

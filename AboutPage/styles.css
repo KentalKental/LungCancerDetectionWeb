@@ -1,0 +1,257 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative; 
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: 0.3s ease 0.2s; 
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+.web-name{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+
+.navbar a:hover {
+    background-color: #3aa288;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+body,p{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+.header-container{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+}
+
+.header-title{
+    display: flex;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+    margin: 10px 10px 10px 25px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 10px 0px 0px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    justify-content: space-evenly;
+}
+
+.navbar li{
+   align-self: center;
+}
+
+.navbar a{
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.footer{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer p{
+    color: white;
+}
+
+/* Grid layout */
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+
+}
+
+/* Box styles */
+.box-part,.box-mid{
+    position: relative; /* Allows positioning of pseudo-elements */
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.box-part:hover {
+    transform: scale(1.05);
+    color: transparent; /* Hides the default text */
+}
+
+/* Hover content */
+.box-part::before {
+    content: attr(data-info); /* Pulls the hover-specific text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    align-content: center;
+}
+
+/* Show hover content */
+.box-part:hover::before {
+    opacity: 1;
+}
+
+
+
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.instruction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distributes the child elements with space between them */
+    align-items: flex-start; /* Aligns child items vertically at the top */
+    width: 100%; /* Ensure the parent takes up the full width */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+    padding: 10px;
+    background-color: #e5f4f6;
+    height: 100%;
+}
+
+.ins-1, .ins-2, .ins-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 5px;
+    padding: 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.instruction h3{
+    width: 100%;
+}
+
+.instruction img{
+    width: 100%;
+    margin: 10px;
+    object-fit: cover;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.exp{
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-width: 2px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.ins-2 .exp{
+    height: fit-content;
+}
+
+.ins-2 a{
+    text-decoration: none;
+    color: black;
+}
+
+.ins-2 img{
+    justify-items: center;
+}
+

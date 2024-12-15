@@ -1,0 +1,296 @@
+html, body {
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+    
+}
+
+.web-name{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+
+.navbar a:hover {
+    background-color: #3aa288;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+body,p{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.header-container{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+}
+
+.header-title{
+    display: flex;
+    color: white;
+    font-size: 32px;
+    align-items: center;
+    margin: 10px 10px 10px 25px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px 10px 0px 0px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    justify-content: space-evenly;
+}
+
+.navbar li{
+   align-self: center;
+}
+
+.navbar a{
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Carousel */
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.imgs {
+    width: 100%;
+    height: 100%;
+}
+
+.imgs img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Left Content Section */
+.left-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; /* The text takes up 50% of the width */
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, 
+    rgba(0, 59, 54, 1) 20%, 
+    rgba(0, 161, 147, 0.5) 50%, 
+    rgba(0, 161, 147, 0.2) 75%, 
+    rgba(0, 161, 147, 0.05) 100%);    
+    color: white;
+    z-index: 1; /* Ensure it's above the images */
+    backdrop-filter: blur(30px) 20%; 
+    text-align: left;
+}
+
+.numbers{
+    font-size: 26px;
+}
+.parting{
+    font-size: 14px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative; 
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: 0.3s ease 0.2s; 
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+.startPredicting{
+    background-color: #e5f4f6;
+    display: flex;
+    justify-content: center;
+    padding:0px 10px;
+    width: 100%;
+}
+
+.startPredicting a{
+    padding: 20px;
+    text-decoration: none;
+}
+
+
+.left-content h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.left-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+}
+
+
+
+.info-part{
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    background-color: #00A193;
+    color: white;
+    margin: 20px;
+    border-radius: 20px;
+    height: fit-content;
+    padding: 20px;
+}
+
+.footer{
+    display: flex;
+    background: linear-gradient(to right, #003B36, #00A193);
+    height: fit-content;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer p{
+    color: white;
+}
+
+.instruction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distributes the child elements with space between them */
+    align-items: flex-start; /* Aligns child items vertically at the top */
+    width: 100%; /* Ensure the parent takes up the full width */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+    padding: 10px;
+    background-color: #e5f4f6;
+}
+
+.ins-1, .ins-2, .ins-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 5px;
+    padding: 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.instruction h3{
+    width: 100%;
+}
+
+.instruction img{
+    width: 100%;
+    margin: 10px;
+    object-fit: cover;
+    height: 220px;
+    border-radius: 10px;
+}
+
+.exp{
+    padding: 10px;
+    border-top: 2px solid gray;
+    border-width: 2px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.mid-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #1b6553;
+    padding: 20px;
+    color: white;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class = "header-container">
+        <div class="header-title">
+            <a class="web-name" href="/HomePage/index.html">Lung Cancer Detection</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="/HomePage/index.html">Home</a></li>
+                <li class="pred"><a href="/DetectionPage/index.html">Detection</a></li>
+                <li><a href="/AboutPage/index.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+        <form id="CT-form">
+            <h3 >Upload image of Lung CT Scan </h3>
+            <br>
+            <br>
+            <div id="drop-area" class="drop-area">
+                <p>Drag and drop an image here, or click to upload. (*.jpg , *.jpeg ,*.png , etc)</p>
+                <img id="placeholder-img" src="\Assets\add-image-placeholder.jpg">
+                <input id="CT-input" type="file" accept="image/*" hidden>
+            </div>
+            <div id="validation">
+                *Please submit an image before predicting !
+            </div>
+            <img id ='CT-preview' class ='CT-preview' alt="Image-Preview">
+            <div class="btnContainer">
+                <button id="change-btn" type="button">Remove Image</button>
+                <button id = 'submitBtn' type="submit">Predict Image</button>
+            </div>
+            
+        </form>
+        <div class="res">
+            <h3>Detection Result</h3>
+            <div id="output">
+                <p class="default-message">Submit a CT-Scan image to start the prediction!</p>
+                <div class="result-container">
+                    <!-- Predictions semua disini -->
+                    <div id="caption">
+                        <!-- caption penjelasan disini -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="history-container">
+        <h3>Submission History</h3>
+        <ul id="history-list">
+            <!-- Submission histories -->
+        </ul>
+    </div>
+    
+    <footer class= 'footer'>
+        <p>© 2024 Lung Cancer Detection. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
